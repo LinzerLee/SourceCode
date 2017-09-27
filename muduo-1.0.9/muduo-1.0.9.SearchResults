@@ -1,0 +1,6 @@
+---- GOOGLE_PROTOBUF_VERIFY_VERSION Matches (5 in 5 files) ----
+Codec_test.cc (examples\protobuf\codec):  GOOGLE_PROTOBUF_VERIFY_VERSION;
+Dispatcher_lite_test.cc (examples\protobuf\codec):  GOOGLE_PROTOBUF_VERIFY_VERSION;
+Dispatcher_test.cc (examples\protobuf\codec):  GOOGLE_PROTOBUF_VERIFY_VERSION;
+ProtobufCodecLite.cc (muduo\net\protobuf):    GOOGLE_PROTOBUF_VERIFY_VERSION;
+RpcCodec.cc (muduo\net\protorpc):    GOOGLE_PROTOBUF_VERIFY_VERSION;

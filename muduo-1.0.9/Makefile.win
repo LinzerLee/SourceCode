@@ -1,0 +1,645 @@
+# Project: muduo-1.0.9
+# Makefile created by Dev-C++ 5.11
+
+# This Makefile is written for syntax check!
+# Regenerate it if you want to use this Makefile to build.
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = muduo/base/AsyncLogging.o muduo/base/Condition.o muduo/base/CountDownLatch.o muduo/base/Date.o muduo/base/Exception.o muduo/base/FileUtil.o muduo/base/LogFile.o muduo/base/Logging.o muduo/base/LogStream.o muduo/base/ProcessInfo.o muduo/base/Thread.o muduo/base/ThreadPool.o muduo/base/Timestamp.o muduo/base/TimeZone.o muduo/base/tests/AsyncLogging_test.o muduo/base/tests/Atomic_unittest.o muduo/base/tests/BlockingQueue_bench.o muduo/base/tests/BlockingQueue_test.o muduo/base/tests/BoundedBlockingQueue_test.o muduo/base/tests/Date_unittest.o muduo/base/tests/Exception_test.o muduo/base/tests/FileUtil_test.o muduo/base/tests/Fork_test.o muduo/base/tests/GzipFile_test.o muduo/base/tests/LogFile_test.o muduo/base/tests/Logging_test.o muduo/base/tests/LogStream_bench.o muduo/base/tests/LogStream_test.o muduo/base/tests/Mutex_test.o muduo/base/tests/ProcessInfo_test.o muduo/base/tests/Singleton_test.o muduo/base/tests/SingletonThreadLocal_test.o muduo/base/tests/Thread_bench.o muduo/base/tests/Thread_test.o muduo/base/tests/ThreadLocal_test.o muduo/base/tests/ThreadLocalSingleton_test.o muduo/base/tests/ThreadPool_test.o muduo/base/tests/Timestamp_unittest.o muduo/base/tests/TimeZone_unittest.o muduo/net/Acceptor.o muduo/net/boilerplate.o muduo/net/Buffer.o muduo/net/Channel.o muduo/net/Connector.o muduo/net/EventLoop.o muduo/net/EventLoopThread.o muduo/net/EventLoopThreadPool.o muduo/net/InetAddress.o muduo/net/Poller.o muduo/net/Socket.o muduo/net/SocketsOps.o muduo/net/TcpClient.o muduo/net/TcpConnection.o muduo/net/TcpServer.o muduo/net/Timer.o muduo/net/TimerQueue.o muduo/net/tests/Buffer_unittest.o muduo/net/tests/Channel_test.o muduo/net/tests/EchoClient_unittest.o muduo/net/tests/EchoServer_unittest.o muduo/net/tests/EventLoop_unittest.o muduo/net/tests/EventLoopThread_unittest.o muduo/net/tests/EventLoopThreadPool_unittest.o muduo/net/tests/InetAddress_unittest.o muduo/net/tests/TcpClient_reg1.o muduo/net/tests/TcpClient_reg2.o muduo/net/tests/TcpClient_reg3.o muduo/net/tests/TimerQueue_unittest.o muduo/net/tests/ZlibStream_unittest.o muduo/net/http/HttpContext.o muduo/net/http/HttpResponse.o muduo/net/http/HttpServer.o muduo/net/http/tests/HttpRequest_unittest.o muduo/net/http/tests/HttpServer_test.o muduo/net/inspect/Inspector.o muduo/net/inspect/PerformanceInspector.o muduo/net/inspect/ProcessInspector.o muduo/net/inspect/SystemInspector.o muduo/net/inspect/tests/Inspector_test.o muduo/net/poller/DefaultPoller.o muduo/net/poller/EPollPoller.o muduo/net/poller/PollPoller.o muduo/net/protobuf/ProtobufCodecLite.o muduo/net/protorpc/RpcChannel.o muduo/net/protorpc/RpcCodec.o muduo/net/protorpc/RpcCodec_test.o muduo/net/protorpc/RpcServer.o contrib/hiredis/Hiredis.o contrib/hiredis/mrediscli.o contrib/thrift/ThriftConnection.o contrib/thrift/ThriftServer.o contrib/thrift/tests/echo/EchoServer.o contrib/thrift/tests/ping/PingServer.o examples/ace/logging/client.o examples/ace/logging/server.o examples/ace/ttcp/common.o examples/ace/ttcp/main.o examples/ace/ttcp/ttcp.o examples/ace/ttcp/ttcp_blocking.o examples/asio/chat/client.o examples/asio/chat/loadtest.o examples/asio/chat/server.o examples/asio/chat/server_threaded.o examples/asio/chat/server_threaded_efficient.o examples/asio/chat/server_threaded_highperformance.o examples/asio/tutorial/timer2/timer.o examples/asio/tutorial/timer3/timer.o examples/asio/tutorial/timer4/timer.o examples/asio/tutorial/timer5/timer.o examples/asio/tutorial/timer6/timer.o examples/cdns/dns.o examples/cdns/Resolver.o examples/curl/Curl.o examples/curl/download.o examples/curl/mcurl.o examples/fastcgi/fastcgi.o examples/fastcgi/fastcgi_test.o examples/filetransfer/download.o examples/filetransfer/download2.o examples/filetransfer/download3.o examples/hub/codec.o examples/hub/hub.o examples/hub/pub.o examples/hub/pubsub.o examples/hub/sub.o examples/idleconnection/echo.o examples/idleconnection/main.o examples/idleconnection/sortedlist.o examples/maxconnection/echo.o examples/maxconnection/main.o examples/memcached/client/bench.o examples/memcached/server/footprint_test.o examples/memcached/server/Item.o examples/memcached/server/MemcacheServer.o examples/memcached/server/server.o examples/memcached/server/Session.o examples/multiplexer/demux.o examples/multiplexer/multiplexer.o examples/multiplexer/multiplexer_simple.o examples/netty/discard/client.o examples/netty/discard/server.o examples/netty/echo/client.o examples/netty/echo/server.o examples/netty/echo/server2.o examples/netty/uptime/uptime.o examples/pingpong/bench.o examples/pingpong/client.o examples/pingpong/server.o examples/procmon/dummyload.o examples/procmon/plot.o examples/procmon/plot_test.o examples/procmon/procmon.o examples/protobuf/codec/client.o examples/protobuf/codec/codec.o examples/protobuf/codec/codec_test.o examples/protobuf/codec/dispatcher_lite_test.o examples/protobuf/codec/dispatcher_test.o examples/protobuf/codec/server.o examples/protobuf/resolver/client.o examples/protobuf/resolver/server.o examples/protobuf/rpc/client.o examples/protobuf/rpc/server.o examples/protobuf/rpcbalancer/balancer.o examples/protobuf/rpcbalancer/balancer_raw.o examples/protobuf/rpcbench/client.o examples/protobuf/rpcbench/server.o examples/roundtrip/roundtrip.o examples/roundtrip/roundtrip_udp.o examples/shorturl/shorturl.o examples/socks4a/balancer.o examples/socks4a/socks4a.o examples/socks4a/tcprelay.o examples/sudoku/batch.o examples/sudoku/loadtest.o examples/sudoku/pipeline.o examples/sudoku/server_basic.o examples/sudoku/server_hybrid.o examples/sudoku/server_multiloop.o examples/sudoku/server_prod.o examples/sudoku/server_threadpool.o examples/sudoku/stat_unittest.o examples/sudoku/sudoku.o examples/twisted/finger/finger01.o examples/twisted/finger/finger02.o examples/twisted/finger/finger03.o examples/twisted/finger/finger04.o examples/twisted/finger/finger05.o examples/twisted/finger/finger06.o examples/twisted/finger/finger07.o examples/wordcount/hasher.o examples/wordcount/receiver.o examples/zeromq/local_lat.o examples/zeromq/remote_lat.o examples/simple/allinone/allinone.o examples/simple/chargen/chargen.o examples/simple/chargen/main.o examples/simple/chargenclient/chargenclient.o examples/simple/daytime/daytime.o examples/simple/daytime/main.o examples/simple/discard/discard.o examples/simple/discard/main.o examples/simple/echo/echo.o examples/simple/echo/main.o examples/simple/time/main.o examples/simple/time/time.o examples/simple/timeclient/timeclient.o
+LINKOBJ  = muduo/base/AsyncLogging.o muduo/base/Condition.o muduo/base/CountDownLatch.o muduo/base/Date.o muduo/base/Exception.o muduo/base/FileUtil.o muduo/base/LogFile.o muduo/base/Logging.o muduo/base/LogStream.o muduo/base/ProcessInfo.o muduo/base/Thread.o muduo/base/ThreadPool.o muduo/base/Timestamp.o muduo/base/TimeZone.o muduo/base/tests/AsyncLogging_test.o muduo/base/tests/Atomic_unittest.o muduo/base/tests/BlockingQueue_bench.o muduo/base/tests/BlockingQueue_test.o muduo/base/tests/BoundedBlockingQueue_test.o muduo/base/tests/Date_unittest.o muduo/base/tests/Exception_test.o muduo/base/tests/FileUtil_test.o muduo/base/tests/Fork_test.o muduo/base/tests/GzipFile_test.o muduo/base/tests/LogFile_test.o muduo/base/tests/Logging_test.o muduo/base/tests/LogStream_bench.o muduo/base/tests/LogStream_test.o muduo/base/tests/Mutex_test.o muduo/base/tests/ProcessInfo_test.o muduo/base/tests/Singleton_test.o muduo/base/tests/SingletonThreadLocal_test.o muduo/base/tests/Thread_bench.o muduo/base/tests/Thread_test.o muduo/base/tests/ThreadLocal_test.o muduo/base/tests/ThreadLocalSingleton_test.o muduo/base/tests/ThreadPool_test.o muduo/base/tests/Timestamp_unittest.o muduo/base/tests/TimeZone_unittest.o muduo/net/Acceptor.o muduo/net/boilerplate.o muduo/net/Buffer.o muduo/net/Channel.o muduo/net/Connector.o muduo/net/EventLoop.o muduo/net/EventLoopThread.o muduo/net/EventLoopThreadPool.o muduo/net/InetAddress.o muduo/net/Poller.o muduo/net/Socket.o muduo/net/SocketsOps.o muduo/net/TcpClient.o muduo/net/TcpConnection.o muduo/net/TcpServer.o muduo/net/Timer.o muduo/net/TimerQueue.o muduo/net/tests/Buffer_unittest.o muduo/net/tests/Channel_test.o muduo/net/tests/EchoClient_unittest.o muduo/net/tests/EchoServer_unittest.o muduo/net/tests/EventLoop_unittest.o muduo/net/tests/EventLoopThread_unittest.o muduo/net/tests/EventLoopThreadPool_unittest.o muduo/net/tests/InetAddress_unittest.o muduo/net/tests/TcpClient_reg1.o muduo/net/tests/TcpClient_reg2.o muduo/net/tests/TcpClient_reg3.o muduo/net/tests/TimerQueue_unittest.o muduo/net/tests/ZlibStream_unittest.o muduo/net/http/HttpContext.o muduo/net/http/HttpResponse.o muduo/net/http/HttpServer.o muduo/net/http/tests/HttpRequest_unittest.o muduo/net/http/tests/HttpServer_test.o muduo/net/inspect/Inspector.o muduo/net/inspect/PerformanceInspector.o muduo/net/inspect/ProcessInspector.o muduo/net/inspect/SystemInspector.o muduo/net/inspect/tests/Inspector_test.o muduo/net/poller/DefaultPoller.o muduo/net/poller/EPollPoller.o muduo/net/poller/PollPoller.o muduo/net/protobuf/ProtobufCodecLite.o muduo/net/protorpc/RpcChannel.o muduo/net/protorpc/RpcCodec.o muduo/net/protorpc/RpcCodec_test.o muduo/net/protorpc/RpcServer.o contrib/hiredis/Hiredis.o contrib/hiredis/mrediscli.o contrib/thrift/ThriftConnection.o contrib/thrift/ThriftServer.o contrib/thrift/tests/echo/EchoServer.o contrib/thrift/tests/ping/PingServer.o examples/ace/logging/client.o examples/ace/logging/server.o examples/ace/ttcp/common.o examples/ace/ttcp/main.o examples/ace/ttcp/ttcp.o examples/ace/ttcp/ttcp_blocking.o examples/asio/chat/client.o examples/asio/chat/loadtest.o examples/asio/chat/server.o examples/asio/chat/server_threaded.o examples/asio/chat/server_threaded_efficient.o examples/asio/chat/server_threaded_highperformance.o examples/asio/tutorial/timer2/timer.o examples/asio/tutorial/timer3/timer.o examples/asio/tutorial/timer4/timer.o examples/asio/tutorial/timer5/timer.o examples/asio/tutorial/timer6/timer.o examples/cdns/dns.o examples/cdns/Resolver.o examples/curl/Curl.o examples/curl/download.o examples/curl/mcurl.o examples/fastcgi/fastcgi.o examples/fastcgi/fastcgi_test.o examples/filetransfer/download.o examples/filetransfer/download2.o examples/filetransfer/download3.o examples/hub/codec.o examples/hub/hub.o examples/hub/pub.o examples/hub/pubsub.o examples/hub/sub.o examples/idleconnection/echo.o examples/idleconnection/main.o examples/idleconnection/sortedlist.o examples/maxconnection/echo.o examples/maxconnection/main.o examples/memcached/client/bench.o examples/memcached/server/footprint_test.o examples/memcached/server/Item.o examples/memcached/server/MemcacheServer.o examples/memcached/server/server.o examples/memcached/server/Session.o examples/multiplexer/demux.o examples/multiplexer/multiplexer.o examples/multiplexer/multiplexer_simple.o examples/netty/discard/client.o examples/netty/discard/server.o examples/netty/echo/client.o examples/netty/echo/server.o examples/netty/echo/server2.o examples/netty/uptime/uptime.o examples/pingpong/bench.o examples/pingpong/client.o examples/pingpong/server.o examples/procmon/dummyload.o examples/procmon/plot.o examples/procmon/plot_test.o examples/procmon/procmon.o examples/protobuf/codec/client.o examples/protobuf/codec/codec.o examples/protobuf/codec/codec_test.o examples/protobuf/codec/dispatcher_lite_test.o examples/protobuf/codec/dispatcher_test.o examples/protobuf/codec/server.o examples/protobuf/resolver/client.o examples/protobuf/resolver/server.o examples/protobuf/rpc/client.o examples/protobuf/rpc/server.o examples/protobuf/rpcbalancer/balancer.o examples/protobuf/rpcbalancer/balancer_raw.o examples/protobuf/rpcbench/client.o examples/protobuf/rpcbench/server.o examples/roundtrip/roundtrip.o examples/roundtrip/roundtrip_udp.o examples/shorturl/shorturl.o examples/socks4a/balancer.o examples/socks4a/socks4a.o examples/socks4a/tcprelay.o examples/sudoku/batch.o examples/sudoku/loadtest.o examples/sudoku/pipeline.o examples/sudoku/server_basic.o examples/sudoku/server_hybrid.o examples/sudoku/server_multiloop.o examples/sudoku/server_prod.o examples/sudoku/server_threadpool.o examples/sudoku/stat_unittest.o examples/sudoku/sudoku.o examples/twisted/finger/finger01.o examples/twisted/finger/finger02.o examples/twisted/finger/finger03.o examples/twisted/finger/finger04.o examples/twisted/finger/finger05.o examples/twisted/finger/finger06.o examples/twisted/finger/finger07.o examples/wordcount/hasher.o examples/wordcount/receiver.o examples/zeromq/local_lat.o examples/zeromq/remote_lat.o examples/simple/allinone/allinone.o examples/simple/chargen/chargen.o examples/simple/chargen/main.o examples/simple/chargenclient/chargenclient.o examples/simple/daytime/daytime.o examples/simple/daytime/main.o examples/simple/discard/discard.o examples/simple/discard/main.o examples/simple/echo/echo.o examples/simple/echo/main.o examples/simple/time/main.o examples/simple/time/time.o examples/simple/timeclient/timeclient.o
+LIBS     = -L"E:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -m32
+INCS     = -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = muduo-1.0.9.exe
+CXXFLAGS = $(CXXINCS) -fsyntax-only -m32
+CFLAGS   = $(INCS) -fsyntax-only -m32
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom $(OBJ) $(BIN)
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+
+muduo/base/AsyncLogging.o: muduo/base/AsyncLogging.cc
+	$(CPP) -c muduo/base/AsyncLogging.cc $(CXXFLAGS)
+
+muduo/base/Condition.o: muduo/base/Condition.cc
+	$(CPP) -c muduo/base/Condition.cc $(CXXFLAGS)
+
+muduo/base/CountDownLatch.o: muduo/base/CountDownLatch.cc
+	$(CPP) -c muduo/base/CountDownLatch.cc $(CXXFLAGS)
+
+muduo/base/Date.o: muduo/base/Date.cc
+	$(CPP) -c muduo/base/Date.cc $(CXXFLAGS)
+
+muduo/base/Exception.o: muduo/base/Exception.cc
+	$(CPP) -c muduo/base/Exception.cc $(CXXFLAGS)
+
+muduo/base/FileUtil.o: muduo/base/FileUtil.cc
+	$(CPP) -c muduo/base/FileUtil.cc $(CXXFLAGS)
+
+muduo/base/LogFile.o: muduo/base/LogFile.cc
+	$(CPP) -c muduo/base/LogFile.cc $(CXXFLAGS)
+
+muduo/base/Logging.o: muduo/base/Logging.cc
+	$(CPP) -c muduo/base/Logging.cc $(CXXFLAGS)
+
+muduo/base/LogStream.o: muduo/base/LogStream.cc
+	$(CPP) -c muduo/base/LogStream.cc $(CXXFLAGS)
+
+muduo/base/ProcessInfo.o: muduo/base/ProcessInfo.cc
+	$(CPP) -c muduo/base/ProcessInfo.cc $(CXXFLAGS)
+
+muduo/base/Thread.o: muduo/base/Thread.cc
+	$(CPP) -c muduo/base/Thread.cc $(CXXFLAGS)
+
+muduo/base/ThreadPool.o: muduo/base/ThreadPool.cc
+	$(CPP) -c muduo/base/ThreadPool.cc $(CXXFLAGS)
+
+muduo/base/Timestamp.o: muduo/base/Timestamp.cc
+	$(CPP) -c muduo/base/Timestamp.cc $(CXXFLAGS)
+
+muduo/base/TimeZone.o: muduo/base/TimeZone.cc
+	$(CPP) -c muduo/base/TimeZone.cc $(CXXFLAGS)
+
+muduo/base/tests/AsyncLogging_test.o: muduo/base/tests/AsyncLogging_test.cc
+	$(CPP) -c muduo/base/tests/AsyncLogging_test.cc $(CXXFLAGS)
+
+muduo/base/tests/Atomic_unittest.o: muduo/base/tests/Atomic_unittest.cc
+	$(CPP) -c muduo/base/tests/Atomic_unittest.cc $(CXXFLAGS)
+
+muduo/base/tests/BlockingQueue_bench.o: muduo/base/tests/BlockingQueue_bench.cc
+	$(CPP) -c muduo/base/tests/BlockingQueue_bench.cc $(CXXFLAGS)
+
+muduo/base/tests/BlockingQueue_test.o: muduo/base/tests/BlockingQueue_test.cc
+	$(CPP) -c muduo/base/tests/BlockingQueue_test.cc $(CXXFLAGS)
+
+muduo/base/tests/BoundedBlockingQueue_test.o: muduo/base/tests/BoundedBlockingQueue_test.cc
+	$(CPP) -c muduo/base/tests/BoundedBlockingQueue_test.cc $(CXXFLAGS)
+
+muduo/base/tests/Date_unittest.o: muduo/base/tests/Date_unittest.cc
+	$(CPP) -c muduo/base/tests/Date_unittest.cc $(CXXFLAGS)
+
+muduo/base/tests/Exception_test.o: muduo/base/tests/Exception_test.cc
+	$(CPP) -c muduo/base/tests/Exception_test.cc $(CXXFLAGS)
+
+muduo/base/tests/FileUtil_test.o: muduo/base/tests/FileUtil_test.cc
+	$(CPP) -c muduo/base/tests/FileUtil_test.cc $(CXXFLAGS)
+
+muduo/base/tests/Fork_test.o: muduo/base/tests/Fork_test.cc
+	$(CPP) -c muduo/base/tests/Fork_test.cc $(CXXFLAGS)
+
+muduo/base/tests/GzipFile_test.o: muduo/base/tests/GzipFile_test.cc
+	$(CPP) -c muduo/base/tests/GzipFile_test.cc $(CXXFLAGS)
+
+muduo/base/tests/LogFile_test.o: muduo/base/tests/LogFile_test.cc
+	$(CPP) -c muduo/base/tests/LogFile_test.cc $(CXXFLAGS)
+
+muduo/base/tests/Logging_test.o: muduo/base/tests/Logging_test.cc
+	$(CPP) -c muduo/base/tests/Logging_test.cc $(CXXFLAGS)
+
+muduo/base/tests/LogStream_bench.o: muduo/base/tests/LogStream_bench.cc
+	$(CPP) -c muduo/base/tests/LogStream_bench.cc $(CXXFLAGS)
+
+muduo/base/tests/LogStream_test.o: muduo/base/tests/LogStream_test.cc
+	$(CPP) -c muduo/base/tests/LogStream_test.cc $(CXXFLAGS)
+
+muduo/base/tests/Mutex_test.o: muduo/base/tests/Mutex_test.cc
+	$(CPP) -c muduo/base/tests/Mutex_test.cc $(CXXFLAGS)
+
+muduo/base/tests/ProcessInfo_test.o: muduo/base/tests/ProcessInfo_test.cc
+	$(CPP) -c muduo/base/tests/ProcessInfo_test.cc $(CXXFLAGS)
+
+muduo/base/tests/Singleton_test.o: muduo/base/tests/Singleton_test.cc
+	$(CPP) -c muduo/base/tests/Singleton_test.cc $(CXXFLAGS)
+
+muduo/base/tests/SingletonThreadLocal_test.o: muduo/base/tests/SingletonThreadLocal_test.cc
+	$(CPP) -c muduo/base/tests/SingletonThreadLocal_test.cc $(CXXFLAGS)
+
+muduo/base/tests/Thread_bench.o: muduo/base/tests/Thread_bench.cc
+	$(CPP) -c muduo/base/tests/Thread_bench.cc $(CXXFLAGS)
+
+muduo/base/tests/Thread_test.o: muduo/base/tests/Thread_test.cc
+	$(CPP) -c muduo/base/tests/Thread_test.cc $(CXXFLAGS)
+
+muduo/base/tests/ThreadLocal_test.o: muduo/base/tests/ThreadLocal_test.cc
+	$(CPP) -c muduo/base/tests/ThreadLocal_test.cc $(CXXFLAGS)
+
+muduo/base/tests/ThreadLocalSingleton_test.o: muduo/base/tests/ThreadLocalSingleton_test.cc
+	$(CPP) -c muduo/base/tests/ThreadLocalSingleton_test.cc $(CXXFLAGS)
+
+muduo/base/tests/ThreadPool_test.o: muduo/base/tests/ThreadPool_test.cc
+	$(CPP) -c muduo/base/tests/ThreadPool_test.cc $(CXXFLAGS)
+
+muduo/base/tests/Timestamp_unittest.o: muduo/base/tests/Timestamp_unittest.cc
+	$(CPP) -c muduo/base/tests/Timestamp_unittest.cc $(CXXFLAGS)
+
+muduo/base/tests/TimeZone_unittest.o: muduo/base/tests/TimeZone_unittest.cc
+	$(CPP) -c muduo/base/tests/TimeZone_unittest.cc $(CXXFLAGS)
+
+muduo/net/Acceptor.o: muduo/net/Acceptor.cc
+	$(CPP) -c muduo/net/Acceptor.cc $(CXXFLAGS)
+
+muduo/net/boilerplate.o: muduo/net/boilerplate.cc
+	$(CPP) -c muduo/net/boilerplate.cc $(CXXFLAGS)
+
+muduo/net/Buffer.o: muduo/net/Buffer.cc
+	$(CPP) -c muduo/net/Buffer.cc $(CXXFLAGS)
+
+muduo/net/Channel.o: muduo/net/Channel.cc
+	$(CPP) -c muduo/net/Channel.cc $(CXXFLAGS)
+
+muduo/net/Connector.o: muduo/net/Connector.cc
+	$(CPP) -c muduo/net/Connector.cc $(CXXFLAGS)
+
+muduo/net/EventLoop.o: muduo/net/EventLoop.cc
+	$(CPP) -c muduo/net/EventLoop.cc $(CXXFLAGS)
+
+muduo/net/EventLoopThread.o: muduo/net/EventLoopThread.cc
+	$(CPP) -c muduo/net/EventLoopThread.cc $(CXXFLAGS)
+
+muduo/net/EventLoopThreadPool.o: muduo/net/EventLoopThreadPool.cc
+	$(CPP) -c muduo/net/EventLoopThreadPool.cc $(CXXFLAGS)
+
+muduo/net/InetAddress.o: muduo/net/InetAddress.cc
+	$(CPP) -c muduo/net/InetAddress.cc $(CXXFLAGS)
+
+muduo/net/Poller.o: muduo/net/Poller.cc
+	$(CPP) -c muduo/net/Poller.cc $(CXXFLAGS)
+
+muduo/net/Socket.o: muduo/net/Socket.cc
+	$(CPP) -c muduo/net/Socket.cc $(CXXFLAGS)
+
+muduo/net/SocketsOps.o: muduo/net/SocketsOps.cc
+	$(CPP) -c muduo/net/SocketsOps.cc $(CXXFLAGS)
+
+muduo/net/TcpClient.o: muduo/net/TcpClient.cc
+	$(CPP) -c muduo/net/TcpClient.cc $(CXXFLAGS)
+
+muduo/net/TcpConnection.o: muduo/net/TcpConnection.cc
+	$(CPP) -c muduo/net/TcpConnection.cc $(CXXFLAGS)
+
+muduo/net/TcpServer.o: muduo/net/TcpServer.cc
+	$(CPP) -c muduo/net/TcpServer.cc $(CXXFLAGS)
+
+muduo/net/Timer.o: muduo/net/Timer.cc
+	$(CPP) -c muduo/net/Timer.cc $(CXXFLAGS)
+
+muduo/net/TimerQueue.o: muduo/net/TimerQueue.cc
+	$(CPP) -c muduo/net/TimerQueue.cc $(CXXFLAGS)
+
+muduo/net/tests/Buffer_unittest.o: muduo/net/tests/Buffer_unittest.cc
+	$(CPP) -c muduo/net/tests/Buffer_unittest.cc $(CXXFLAGS)
+
+muduo/net/tests/Channel_test.o: muduo/net/tests/Channel_test.cc
+	$(CPP) -c muduo/net/tests/Channel_test.cc $(CXXFLAGS)
+
+muduo/net/tests/EchoClient_unittest.o: muduo/net/tests/EchoClient_unittest.cc
+	$(CPP) -c muduo/net/tests/EchoClient_unittest.cc $(CXXFLAGS)
+
+muduo/net/tests/EchoServer_unittest.o: muduo/net/tests/EchoServer_unittest.cc
+	$(CPP) -c muduo/net/tests/EchoServer_unittest.cc $(CXXFLAGS)
+
+muduo/net/tests/EventLoop_unittest.o: muduo/net/tests/EventLoop_unittest.cc
+	$(CPP) -c muduo/net/tests/EventLoop_unittest.cc $(CXXFLAGS)
+
+muduo/net/tests/EventLoopThread_unittest.o: muduo/net/tests/EventLoopThread_unittest.cc
+	$(CPP) -c muduo/net/tests/EventLoopThread_unittest.cc $(CXXFLAGS)
+
+muduo/net/tests/EventLoopThreadPool_unittest.o: muduo/net/tests/EventLoopThreadPool_unittest.cc
+	$(CPP) -c muduo/net/tests/EventLoopThreadPool_unittest.cc $(CXXFLAGS)
+
+muduo/net/tests/InetAddress_unittest.o: muduo/net/tests/InetAddress_unittest.cc
+	$(CPP) -c muduo/net/tests/InetAddress_unittest.cc $(CXXFLAGS)
+
+muduo/net/tests/TcpClient_reg1.o: muduo/net/tests/TcpClient_reg1.cc
+	$(CPP) -c muduo/net/tests/TcpClient_reg1.cc $(CXXFLAGS)
+
+muduo/net/tests/TcpClient_reg2.o: muduo/net/tests/TcpClient_reg2.cc
+	$(CPP) -c muduo/net/tests/TcpClient_reg2.cc $(CXXFLAGS)
+
+muduo/net/tests/TcpClient_reg3.o: muduo/net/tests/TcpClient_reg3.cc
+	$(CPP) -c muduo/net/tests/TcpClient_reg3.cc $(CXXFLAGS)
+
+muduo/net/tests/TimerQueue_unittest.o: muduo/net/tests/TimerQueue_unittest.cc
+	$(CPP) -c muduo/net/tests/TimerQueue_unittest.cc $(CXXFLAGS)
+
+muduo/net/tests/ZlibStream_unittest.o: muduo/net/tests/ZlibStream_unittest.cc
+	$(CPP) -c muduo/net/tests/ZlibStream_unittest.cc $(CXXFLAGS)
+
+muduo/net/http/HttpContext.o: muduo/net/http/HttpContext.cc
+	$(CPP) -c muduo/net/http/HttpContext.cc $(CXXFLAGS)
+
+muduo/net/http/HttpResponse.o: muduo/net/http/HttpResponse.cc
+	$(CPP) -c muduo/net/http/HttpResponse.cc $(CXXFLAGS)
+
+muduo/net/http/HttpServer.o: muduo/net/http/HttpServer.cc
+	$(CPP) -c muduo/net/http/HttpServer.cc $(CXXFLAGS)
+
+muduo/net/http/tests/HttpRequest_unittest.o: muduo/net/http/tests/HttpRequest_unittest.cc
+	$(CPP) -c muduo/net/http/tests/HttpRequest_unittest.cc $(CXXFLAGS)
+
+muduo/net/http/tests/HttpServer_test.o: muduo/net/http/tests/HttpServer_test.cc
+	$(CPP) -c muduo/net/http/tests/HttpServer_test.cc $(CXXFLAGS)
+
+muduo/net/inspect/Inspector.o: muduo/net/inspect/Inspector.cc
+	$(CPP) -c muduo/net/inspect/Inspector.cc $(CXXFLAGS)
+
+muduo/net/inspect/PerformanceInspector.o: muduo/net/inspect/PerformanceInspector.cc
+	$(CPP) -c muduo/net/inspect/PerformanceInspector.cc $(CXXFLAGS)
+
+muduo/net/inspect/ProcessInspector.o: muduo/net/inspect/ProcessInspector.cc
+	$(CPP) -c muduo/net/inspect/ProcessInspector.cc $(CXXFLAGS)
+
+muduo/net/inspect/SystemInspector.o: muduo/net/inspect/SystemInspector.cc
+	$(CPP) -c muduo/net/inspect/SystemInspector.cc $(CXXFLAGS)
+
+muduo/net/inspect/tests/Inspector_test.o: muduo/net/inspect/tests/Inspector_test.cc
+	$(CPP) -c muduo/net/inspect/tests/Inspector_test.cc $(CXXFLAGS)
+
+muduo/net/poller/DefaultPoller.o: muduo/net/poller/DefaultPoller.cc
+	$(CPP) -c muduo/net/poller/DefaultPoller.cc $(CXXFLAGS)
+
+muduo/net/poller/EPollPoller.o: muduo/net/poller/EPollPoller.cc
+	$(CPP) -c muduo/net/poller/EPollPoller.cc $(CXXFLAGS)
+
+muduo/net/poller/PollPoller.o: muduo/net/poller/PollPoller.cc
+	$(CPP) -c muduo/net/poller/PollPoller.cc $(CXXFLAGS)
+
+muduo/net/protobuf/ProtobufCodecLite.o: muduo/net/protobuf/ProtobufCodecLite.cc
+	$(CPP) -c muduo/net/protobuf/ProtobufCodecLite.cc $(CXXFLAGS)
+
+muduo/net/protorpc/RpcChannel.o: muduo/net/protorpc/RpcChannel.cc
+	$(CPP) -c muduo/net/protorpc/RpcChannel.cc $(CXXFLAGS)
+
+muduo/net/protorpc/RpcCodec.o: muduo/net/protorpc/RpcCodec.cc
+	$(CPP) -c muduo/net/protorpc/RpcCodec.cc $(CXXFLAGS)
+
+muduo/net/protorpc/RpcCodec_test.o: muduo/net/protorpc/RpcCodec_test.cc
+	$(CPP) -c muduo/net/protorpc/RpcCodec_test.cc $(CXXFLAGS)
+
+muduo/net/protorpc/RpcServer.o: muduo/net/protorpc/RpcServer.cc
+	$(CPP) -c muduo/net/protorpc/RpcServer.cc $(CXXFLAGS)
+
+contrib/hiredis/Hiredis.o: contrib/hiredis/Hiredis.cc
+	$(CPP) -c contrib/hiredis/Hiredis.cc $(CXXFLAGS)
+
+contrib/hiredis/mrediscli.o: contrib/hiredis/mrediscli.cc
+	$(CPP) -c contrib/hiredis/mrediscli.cc $(CXXFLAGS)
+
+contrib/thrift/ThriftConnection.o: contrib/thrift/ThriftConnection.cc
+	$(CPP) -c contrib/thrift/ThriftConnection.cc $(CXXFLAGS)
+
+contrib/thrift/ThriftServer.o: contrib/thrift/ThriftServer.cc
+	$(CPP) -c contrib/thrift/ThriftServer.cc $(CXXFLAGS)
+
+contrib/thrift/tests/echo/EchoServer.o: contrib/thrift/tests/echo/EchoServer.cc
+	$(CPP) -c contrib/thrift/tests/echo/EchoServer.cc $(CXXFLAGS)
+
+contrib/thrift/tests/ping/PingServer.o: contrib/thrift/tests/ping/PingServer.cc
+	$(CPP) -c contrib/thrift/tests/ping/PingServer.cc $(CXXFLAGS)
+
+examples/ace/logging/client.o: examples/ace/logging/client.cc
+	$(CPP) -c examples/ace/logging/client.cc $(CXXFLAGS)
+
+examples/ace/logging/server.o: examples/ace/logging/server.cc
+	$(CPP) -c examples/ace/logging/server.cc $(CXXFLAGS)
+
+examples/ace/ttcp/common.o: examples/ace/ttcp/common.cc
+	$(CPP) -c examples/ace/ttcp/common.cc $(CXXFLAGS)
+
+examples/ace/ttcp/main.o: examples/ace/ttcp/main.cc
+	$(CPP) -c examples/ace/ttcp/main.cc $(CXXFLAGS)
+
+examples/ace/ttcp/ttcp.o: examples/ace/ttcp/ttcp.cc
+	$(CPP) -c examples/ace/ttcp/ttcp.cc $(CXXFLAGS)
+
+examples/ace/ttcp/ttcp_blocking.o: examples/ace/ttcp/ttcp_blocking.cc
+	$(CPP) -c examples/ace/ttcp/ttcp_blocking.cc $(CXXFLAGS)
+
+examples/asio/chat/client.o: examples/asio/chat/client.cc
+	$(CPP) -c examples/asio/chat/client.cc $(CXXFLAGS)
+
+examples/asio/chat/loadtest.o: examples/asio/chat/loadtest.cc
+	$(CPP) -c examples/asio/chat/loadtest.cc $(CXXFLAGS)
+
+examples/asio/chat/server.o: examples/asio/chat/server.cc
+	$(CPP) -c examples/asio/chat/server.cc $(CXXFLAGS)
+
+examples/asio/chat/server_threaded.o: examples/asio/chat/server_threaded.cc
+	$(CPP) -c examples/asio/chat/server_threaded.cc $(CXXFLAGS)
+
+examples/asio/chat/server_threaded_efficient.o: examples/asio/chat/server_threaded_efficient.cc
+	$(CPP) -c examples/asio/chat/server_threaded_efficient.cc $(CXXFLAGS)
+
+examples/asio/chat/server_threaded_highperformance.o: examples/asio/chat/server_threaded_highperformance.cc
+	$(CPP) -c examples/asio/chat/server_threaded_highperformance.cc $(CXXFLAGS)
+
+examples/asio/tutorial/timer2/timer.o: examples/asio/tutorial/timer2/timer.cc
+	$(CPP) -c examples/asio/tutorial/timer2/timer.cc $(CXXFLAGS)
+
+examples/asio/tutorial/timer3/timer.o: examples/asio/tutorial/timer3/timer.cc
+	$(CPP) -c examples/asio/tutorial/timer3/timer.cc $(CXXFLAGS)
+
+examples/asio/tutorial/timer4/timer.o: examples/asio/tutorial/timer4/timer.cc
+	$(CPP) -c examples/asio/tutorial/timer4/timer.cc $(CXXFLAGS)
+
+examples/asio/tutorial/timer5/timer.o: examples/asio/tutorial/timer5/timer.cc
+	$(CPP) -c examples/asio/tutorial/timer5/timer.cc $(CXXFLAGS)
+
+examples/asio/tutorial/timer6/timer.o: examples/asio/tutorial/timer6/timer.cc
+	$(CPP) -c examples/asio/tutorial/timer6/timer.cc $(CXXFLAGS)
+
+examples/cdns/dns.o: examples/cdns/dns.cc
+	$(CPP) -c examples/cdns/dns.cc $(CXXFLAGS)
+
+examples/cdns/Resolver.o: examples/cdns/Resolver.cc
+	$(CPP) -c examples/cdns/Resolver.cc $(CXXFLAGS)
+
+examples/curl/Curl.o: examples/curl/Curl.cc
+	$(CPP) -c examples/curl/Curl.cc $(CXXFLAGS)
+
+examples/curl/download.o: examples/curl/download.cc
+	$(CPP) -c examples/curl/download.cc $(CXXFLAGS)
+
+examples/curl/mcurl.o: examples/curl/mcurl.cc
+	$(CPP) -c examples/curl/mcurl.cc $(CXXFLAGS)
+
+examples/fastcgi/fastcgi.o: examples/fastcgi/fastcgi.cc
+	$(CPP) -c examples/fastcgi/fastcgi.cc $(CXXFLAGS)
+
+examples/fastcgi/fastcgi_test.o: examples/fastcgi/fastcgi_test.cc
+	$(CPP) -c examples/fastcgi/fastcgi_test.cc $(CXXFLAGS)
+
+examples/filetransfer/download.o: examples/filetransfer/download.cc
+	$(CPP) -c examples/filetransfer/download.cc $(CXXFLAGS)
+
+examples/filetransfer/download2.o: examples/filetransfer/download2.cc
+	$(CPP) -c examples/filetransfer/download2.cc $(CXXFLAGS)
+
+examples/filetransfer/download3.o: examples/filetransfer/download3.cc
+	$(CPP) -c examples/filetransfer/download3.cc $(CXXFLAGS)
+
+examples/hub/codec.o: examples/hub/codec.cc
+	$(CPP) -c examples/hub/codec.cc $(CXXFLAGS)
+
+examples/hub/hub.o: examples/hub/hub.cc
+	$(CPP) -c examples/hub/hub.cc $(CXXFLAGS)
+
+examples/hub/pub.o: examples/hub/pub.cc
+	$(CPP) -c examples/hub/pub.cc $(CXXFLAGS)
+
+examples/hub/pubsub.o: examples/hub/pubsub.cc
+	$(CPP) -c examples/hub/pubsub.cc $(CXXFLAGS)
+
+examples/hub/sub.o: examples/hub/sub.cc
+	$(CPP) -c examples/hub/sub.cc $(CXXFLAGS)
+
+examples/idleconnection/echo.o: examples/idleconnection/echo.cc
+	$(CPP) -c examples/idleconnection/echo.cc $(CXXFLAGS)
+
+examples/idleconnection/main.o: examples/idleconnection/main.cc
+	$(CPP) -c examples/idleconnection/main.cc $(CXXFLAGS)
+
+examples/idleconnection/sortedlist.o: examples/idleconnection/sortedlist.cc
+	$(CPP) -c examples/idleconnection/sortedlist.cc $(CXXFLAGS)
+
+examples/maxconnection/echo.o: examples/maxconnection/echo.cc
+	$(CPP) -c examples/maxconnection/echo.cc $(CXXFLAGS)
+
+examples/maxconnection/main.o: examples/maxconnection/main.cc
+	$(CPP) -c examples/maxconnection/main.cc $(CXXFLAGS)
+
+examples/memcached/client/bench.o: examples/memcached/client/bench.cc
+	$(CPP) -c examples/memcached/client/bench.cc $(CXXFLAGS)
+
+examples/memcached/server/footprint_test.o: examples/memcached/server/footprint_test.cc
+	$(CPP) -c examples/memcached/server/footprint_test.cc $(CXXFLAGS)
+
+examples/memcached/server/Item.o: examples/memcached/server/Item.cc
+	$(CPP) -c examples/memcached/server/Item.cc $(CXXFLAGS)
+
+examples/memcached/server/MemcacheServer.o: examples/memcached/server/MemcacheServer.cc
+	$(CPP) -c examples/memcached/server/MemcacheServer.cc $(CXXFLAGS)
+
+examples/memcached/server/server.o: examples/memcached/server/server.cc
+	$(CPP) -c examples/memcached/server/server.cc $(CXXFLAGS)
+
+examples/memcached/server/Session.o: examples/memcached/server/Session.cc
+	$(CPP) -c examples/memcached/server/Session.cc $(CXXFLAGS)
+
+examples/multiplexer/demux.o: examples/multiplexer/demux.cc
+	$(CPP) -c examples/multiplexer/demux.cc $(CXXFLAGS)
+
+examples/multiplexer/multiplexer.o: examples/multiplexer/multiplexer.cc
+	$(CPP) -c examples/multiplexer/multiplexer.cc $(CXXFLAGS)
+
+examples/multiplexer/multiplexer_simple.o: examples/multiplexer/multiplexer_simple.cc
+	$(CPP) -c examples/multiplexer/multiplexer_simple.cc $(CXXFLAGS)
+
+examples/netty/discard/client.o: examples/netty/discard/client.cc
+	$(CPP) -c examples/netty/discard/client.cc $(CXXFLAGS)
+
+examples/netty/discard/server.o: examples/netty/discard/server.cc
+	$(CPP) -c examples/netty/discard/server.cc $(CXXFLAGS)
+
+examples/netty/echo/client.o: examples/netty/echo/client.cc
+	$(CPP) -c examples/netty/echo/client.cc $(CXXFLAGS)
+
+examples/netty/echo/server.o: examples/netty/echo/server.cc
+	$(CPP) -c examples/netty/echo/server.cc $(CXXFLAGS)
+
+examples/netty/echo/server2.o: examples/netty/echo/server2.cc
+	$(CPP) -c examples/netty/echo/server2.cc $(CXXFLAGS)
+
+examples/netty/uptime/uptime.o: examples/netty/uptime/uptime.cc
+	$(CPP) -c examples/netty/uptime/uptime.cc $(CXXFLAGS)
+
+examples/pingpong/bench.o: examples/pingpong/bench.cc
+	$(CPP) -c examples/pingpong/bench.cc $(CXXFLAGS)
+
+examples/pingpong/client.o: examples/pingpong/client.cc
+	$(CPP) -c examples/pingpong/client.cc $(CXXFLAGS)
+
+examples/pingpong/server.o: examples/pingpong/server.cc
+	$(CPP) -c examples/pingpong/server.cc $(CXXFLAGS)
+
+examples/procmon/dummyload.o: examples/procmon/dummyload.cc
+	$(CPP) -c examples/procmon/dummyload.cc $(CXXFLAGS)
+
+examples/procmon/plot.o: examples/procmon/plot.cc
+	$(CPP) -c examples/procmon/plot.cc $(CXXFLAGS)
+
+examples/procmon/plot_test.o: examples/procmon/plot_test.cc
+	$(CPP) -c examples/procmon/plot_test.cc $(CXXFLAGS)
+
+examples/procmon/procmon.o: examples/procmon/procmon.cc
+	$(CPP) -c examples/procmon/procmon.cc $(CXXFLAGS)
+
+examples/protobuf/codec/client.o: examples/protobuf/codec/client.cc
+	$(CPP) -c examples/protobuf/codec/client.cc $(CXXFLAGS)
+
+examples/protobuf/codec/codec.o: examples/protobuf/codec/codec.cc
+	$(CPP) -c examples/protobuf/codec/codec.cc $(CXXFLAGS)
+
+examples/protobuf/codec/codec_test.o: examples/protobuf/codec/codec_test.cc
+	$(CPP) -c examples/protobuf/codec/codec_test.cc $(CXXFLAGS)
+
+examples/protobuf/codec/dispatcher_lite_test.o: examples/protobuf/codec/dispatcher_lite_test.cc
+	$(CPP) -c examples/protobuf/codec/dispatcher_lite_test.cc $(CXXFLAGS)
+
+examples/protobuf/codec/dispatcher_test.o: examples/protobuf/codec/dispatcher_test.cc
+	$(CPP) -c examples/protobuf/codec/dispatcher_test.cc $(CXXFLAGS)
+
+examples/protobuf/codec/server.o: examples/protobuf/codec/server.cc
+	$(CPP) -c examples/protobuf/codec/server.cc $(CXXFLAGS)
+
+examples/protobuf/resolver/client.o: examples/protobuf/resolver/client.cc
+	$(CPP) -c examples/protobuf/resolver/client.cc $(CXXFLAGS)
+
+examples/protobuf/resolver/server.o: examples/protobuf/resolver/server.cc
+	$(CPP) -c examples/protobuf/resolver/server.cc $(CXXFLAGS)
+
+examples/protobuf/rpc/client.o: examples/protobuf/rpc/client.cc
+	$(CPP) -c examples/protobuf/rpc/client.cc $(CXXFLAGS)
+
+examples/protobuf/rpc/server.o: examples/protobuf/rpc/server.cc
+	$(CPP) -c examples/protobuf/rpc/server.cc $(CXXFLAGS)
+
+examples/protobuf/rpcbalancer/balancer.o: examples/protobuf/rpcbalancer/balancer.cc
+	$(CPP) -c examples/protobuf/rpcbalancer/balancer.cc $(CXXFLAGS)
+
+examples/protobuf/rpcbalancer/balancer_raw.o: examples/protobuf/rpcbalancer/balancer_raw.cc
+	$(CPP) -c examples/protobuf/rpcbalancer/balancer_raw.cc $(CXXFLAGS)
+
+examples/protobuf/rpcbench/client.o: examples/protobuf/rpcbench/client.cc
+	$(CPP) -c examples/protobuf/rpcbench/client.cc $(CXXFLAGS)
+
+examples/protobuf/rpcbench/server.o: examples/protobuf/rpcbench/server.cc
+	$(CPP) -c examples/protobuf/rpcbench/server.cc $(CXXFLAGS)
+
+examples/roundtrip/roundtrip.o: examples/roundtrip/roundtrip.cc
+	$(CPP) -c examples/roundtrip/roundtrip.cc $(CXXFLAGS)
+
+examples/roundtrip/roundtrip_udp.o: examples/roundtrip/roundtrip_udp.cc
+	$(CPP) -c examples/roundtrip/roundtrip_udp.cc $(CXXFLAGS)
+
+examples/shorturl/shorturl.o: examples/shorturl/shorturl.cc
+	$(CPP) -c examples/shorturl/shorturl.cc $(CXXFLAGS)
+
+examples/socks4a/balancer.o: examples/socks4a/balancer.cc
+	$(CPP) -c examples/socks4a/balancer.cc $(CXXFLAGS)
+
+examples/socks4a/socks4a.o: examples/socks4a/socks4a.cc
+	$(CPP) -c examples/socks4a/socks4a.cc $(CXXFLAGS)
+
+examples/socks4a/tcprelay.o: examples/socks4a/tcprelay.cc
+	$(CPP) -c examples/socks4a/tcprelay.cc $(CXXFLAGS)
+
+examples/sudoku/batch.o: examples/sudoku/batch.cc
+	$(CPP) -c examples/sudoku/batch.cc $(CXXFLAGS)
+
+examples/sudoku/loadtest.o: examples/sudoku/loadtest.cc
+	$(CPP) -c examples/sudoku/loadtest.cc $(CXXFLAGS)
+
+examples/sudoku/pipeline.o: examples/sudoku/pipeline.cc
+	$(CPP) -c examples/sudoku/pipeline.cc $(CXXFLAGS)
+
+examples/sudoku/server_basic.o: examples/sudoku/server_basic.cc
+	$(CPP) -c examples/sudoku/server_basic.cc $(CXXFLAGS)
+
+examples/sudoku/server_hybrid.o: examples/sudoku/server_hybrid.cc
+	$(CPP) -c examples/sudoku/server_hybrid.cc $(CXXFLAGS)
+
+examples/sudoku/server_multiloop.o: examples/sudoku/server_multiloop.cc
+	$(CPP) -c examples/sudoku/server_multiloop.cc $(CXXFLAGS)
+
+examples/sudoku/server_prod.o: examples/sudoku/server_prod.cc
+	$(CPP) -c examples/sudoku/server_prod.cc $(CXXFLAGS)
+
+examples/sudoku/server_threadpool.o: examples/sudoku/server_threadpool.cc
+	$(CPP) -c examples/sudoku/server_threadpool.cc $(CXXFLAGS)
+
+examples/sudoku/stat_unittest.o: examples/sudoku/stat_unittest.cc
+	$(CPP) -c examples/sudoku/stat_unittest.cc $(CXXFLAGS)
+
+examples/sudoku/sudoku.o: examples/sudoku/sudoku.cc
+	$(CPP) -c examples/sudoku/sudoku.cc $(CXXFLAGS)
+
+examples/twisted/finger/finger01.o: examples/twisted/finger/finger01.cc
+	$(CPP) -c examples/twisted/finger/finger01.cc $(CXXFLAGS)
+
+examples/twisted/finger/finger02.o: examples/twisted/finger/finger02.cc
+	$(CPP) -c examples/twisted/finger/finger02.cc $(CXXFLAGS)
+
+examples/twisted/finger/finger03.o: examples/twisted/finger/finger03.cc
+	$(CPP) -c examples/twisted/finger/finger03.cc $(CXXFLAGS)
+
+examples/twisted/finger/finger04.o: examples/twisted/finger/finger04.cc
+	$(CPP) -c examples/twisted/finger/finger04.cc $(CXXFLAGS)
+
+examples/twisted/finger/finger05.o: examples/twisted/finger/finger05.cc
+	$(CPP) -c examples/twisted/finger/finger05.cc $(CXXFLAGS)
+
+examples/twisted/finger/finger06.o: examples/twisted/finger/finger06.cc
+	$(CPP) -c examples/twisted/finger/finger06.cc $(CXXFLAGS)
+
+examples/twisted/finger/finger07.o: examples/twisted/finger/finger07.cc
+	$(CPP) -c examples/twisted/finger/finger07.cc $(CXXFLAGS)
+
+examples/wordcount/hasher.o: examples/wordcount/hasher.cc
+	$(CPP) -c examples/wordcount/hasher.cc $(CXXFLAGS)
+
+examples/wordcount/receiver.o: examples/wordcount/receiver.cc
+	$(CPP) -c examples/wordcount/receiver.cc $(CXXFLAGS)
+
+examples/zeromq/local_lat.o: examples/zeromq/local_lat.cc
+	$(CPP) -c examples/zeromq/local_lat.cc $(CXXFLAGS)
+
+examples/zeromq/remote_lat.o: examples/zeromq/remote_lat.cc
+	$(CPP) -c examples/zeromq/remote_lat.cc $(CXXFLAGS)
+
+examples/simple/allinone/allinone.o: examples/simple/allinone/allinone.cc
+	$(CPP) -c examples/simple/allinone/allinone.cc $(CXXFLAGS)
+
+examples/simple/chargen/chargen.o: examples/simple/chargen/chargen.cc
+	$(CPP) -c examples/simple/chargen/chargen.cc $(CXXFLAGS)
+
+examples/simple/chargen/main.o: examples/simple/chargen/main.cc
+	$(CPP) -c examples/simple/chargen/main.cc $(CXXFLAGS)
+
+examples/simple/chargenclient/chargenclient.o: examples/simple/chargenclient/chargenclient.cc
+	$(CPP) -c examples/simple/chargenclient/chargenclient.cc $(CXXFLAGS)
+
+examples/simple/daytime/daytime.o: examples/simple/daytime/daytime.cc
+	$(CPP) -c examples/simple/daytime/daytime.cc $(CXXFLAGS)
+
+examples/simple/daytime/main.o: examples/simple/daytime/main.cc
+	$(CPP) -c examples/simple/daytime/main.cc $(CXXFLAGS)
+
+examples/simple/discard/discard.o: examples/simple/discard/discard.cc
+	$(CPP) -c examples/simple/discard/discard.cc $(CXXFLAGS)
+
+examples/simple/discard/main.o: examples/simple/discard/main.cc
+	$(CPP) -c examples/simple/discard/main.cc $(CXXFLAGS)
+
+examples/simple/echo/echo.o: examples/simple/echo/echo.cc
+	$(CPP) -c examples/simple/echo/echo.cc $(CXXFLAGS)
+
+examples/simple/echo/main.o: examples/simple/echo/main.cc
+	$(CPP) -c examples/simple/echo/main.cc $(CXXFLAGS)
+
+examples/simple/time/main.o: examples/simple/time/main.cc
+	$(CPP) -c examples/simple/time/main.cc $(CXXFLAGS)
+
+examples/simple/time/time.o: examples/simple/time/time.cc
+	$(CPP) -c examples/simple/time/time.cc $(CXXFLAGS)
+
+examples/simple/timeclient/timeclient.o: examples/simple/timeclient/timeclient.cc
+	$(CPP) -c examples/simple/timeclient/timeclient.cc $(CXXFLAGS)
