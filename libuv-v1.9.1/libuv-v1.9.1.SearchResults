@@ -1,0 +1,6 @@
+---- uv_async_send Matches (5 in 4 files) ----
+Async.c (src\unix):int uv_async_send(uv_async_t* handle) {
+Fsevents.c (src\unix):  uv_async_send(handle->cf_cb);
+Stream.c (src\unix):      uv_async_send(&s->async);
+Threadpool.c (src):    uv_async_send(&w->loop->wq_async);
+Threadpool.c (src):  uv_async_send(&loop->wq_async);
