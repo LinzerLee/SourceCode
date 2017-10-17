@@ -1,0 +1,38 @@
+---- read_activated Matches (37 in 32 files) ----
+Client.cpp (src):void zmq::client_t::xread_activated (pipe_t *pipe_)
+Client.hpp (src):        void xread_activated (zmq::pipe_t *pipe_);
+Dealer.cpp (src):void zmq::dealer_t::xread_activated (pipe_t *pipe_)
+Dealer.hpp (src):        void xread_activated (zmq::pipe_t *pipe_);
+Dgram.cpp (src):void zmq::dgram_t::xread_activated (pipe_t *)
+Dgram.hpp (src):        void xread_activated (zmq::pipe_t *pipe_);
+Dish.cpp (src):void zmq::dish_t::xread_activated (pipe_t *pipe_)
+Dish.hpp (src):        void xread_activated (zmq::pipe_t *pipe_);
+Gather.cpp (src):void zmq::gather_t::xread_activated (pipe_t *pipe_)
+Gather.hpp (src):        void xread_activated (zmq::pipe_t *pipe_);
+Pair.cpp (src):void zmq::pair_t::xread_activated (pipe_t *)
+Pair.hpp (src):        void xread_activated (zmq::pipe_t *pipe_);
+Pipe.cpp (src):        sink->read_activated (this);
+Pipe.hpp (src):        virtual void read_activated (zmq::pipe_t *pipe_) = 0;
+Pull.cpp (src):void zmq::pull_t::xread_activated (pipe_t *pipe_)
+Pull.hpp (src):        void xread_activated (zmq::pipe_t *pipe_);
+Radio.cpp (src):        xread_activated (pipe_);
+Radio.cpp (src):void zmq::radio_t::xread_activated (pipe_t *pipe_)
+Radio.hpp (src):        void xread_activated (zmq::pipe_t *pipe_);
+Router.cpp (src):void zmq::router_t::xread_activated (pipe_t *pipe_)
+Router.hpp (src):        void xread_activated (zmq::pipe_t *pipe_);
+Server.cpp (src):void zmq::server_t::xread_activated (pipe_t *pipe_)
+Server.hpp (src):        void xread_activated (zmq::pipe_t *pipe_);
+Session_base.cpp (src):void zmq::session_base_t::read_activated (pipe_t *pipe_)
+Session_base.hpp (src):        void read_activated (zmq::pipe_t *pipe_);
+Socket_base.cpp (src):void zmq::socket_base_t::xread_activated (pipe_t *)
+Socket_base.cpp (src):void zmq::socket_base_t::read_activated (pipe_t *pipe_)
+Socket_base.cpp (src):    xread_activated (pipe_);
+Socket_base.hpp (src):        void read_activated (pipe_t *pipe_);
+Socket_base.hpp (src):        virtual void xread_activated (pipe_t *pipe_);
+Stream.cpp (src):void zmq::stream_t::xread_activated (pipe_t *pipe_)
+Stream.hpp (src):        void xread_activated (zmq::pipe_t *pipe_);
+Xpub.cpp (src):    xread_activated (pipe_);
+Xpub.cpp (src):void zmq::xpub_t::xread_activated (pipe_t *pipe_)
+Xpub.hpp (src):        void xread_activated (zmq::pipe_t *pipe_);
+Xsub.cpp (src):void zmq::xsub_t::xread_activated (pipe_t *pipe_)
+Xsub.hpp (src):        void xread_activated (zmq::pipe_t *pipe_);

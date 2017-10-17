@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v140:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=8.1
+DebugDLL|Win32|C:\Users\Linzer\Documents\Projects\zeromq-4.2.0\builds\msvc\vs2015\|

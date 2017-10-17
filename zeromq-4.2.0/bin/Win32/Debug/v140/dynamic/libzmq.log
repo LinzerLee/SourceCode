@@ -1,0 +1,145 @@
+﻿  ConfigurationType : DynamicLibrary
+  Configuration     : DebugDLL
+  PlatformToolset   : v140
+  TargetPath        : C:\Users\Linzer\Documents\Projects\zeromq-4.2.0\builds\msvc\vs2015\libzmq\..\..\..\..\bin\Win32\Debug\v140\dynamic\libzmq.dll
+  Option-tweet      : 
+  Option-sodium     : 
+  Option-openpgm    : 
+  Option-gssapi     : 
+  Option-draftapi   : 
+  Option-usepoll    : 
+  precompiled.cpp
+  address.cpp
+  client.cpp
+  clock.cpp
+  ctx.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\ctx.cpp)
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\address.cpp)
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\client.cpp)
+  curve_client.cpp
+  curve_server.cpp
+  dealer.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\dealer.cpp)
+  decoder_allocators.cpp
+  devpoll.cpp
+  dgram.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\devpoll.cpp)
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\dgram.cpp)
+  dish.cpp
+  dist.cpp
+  epoll.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\dish.cpp)
+  err.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\epoll.cpp)
+  fq.cpp
+  gather.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\gather.cpp)
+  gssapi_client.cpp
+  gssapi_mechanism_base.cpp
+  gssapi_server.cpp
+  io_object.cpp
+  io_thread.cpp
+  ip.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\io_object.cpp)
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\io_thread.cpp)
+  ipc_address.cpp
+  ipc_connecter.cpp
+  ipc_listener.cpp
+  kqueue.cpp
+  lb.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\kqueue.cpp)
+  mailbox.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\mailbox.cpp)
+  mailbox_safe.cpp
+  mechanism.cpp
+  metadata.cpp
+  msg.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\mailbox_safe.cpp)
+  mtrie.cpp
+  null_mechanism.cpp
+  object.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\object.cpp)
+  options.cpp
+  own.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\null_mechanism.cpp)
+  pair.cpp
+  pgm_receiver.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\own.cpp)
+  pgm_sender.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\pair.cpp)
+  pgm_socket.cpp
+  pipe.cpp
+  plain_client.cpp
+  plain_server.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\pipe.cpp)
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\plain_server.cpp)
+  poll.cpp
+  poller_base.cpp
+  proxy.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\poll.cpp)
+  pub.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\proxy.cpp)
+  pull.cpp
+  push.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\pub.cpp)
+  radio.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\pull.cpp)
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\push.cpp)
+  random.cpp
+  raw_decoder.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\radio.cpp)
+  raw_encoder.cpp
+  reaper.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\reaper.cpp)
+  rep.cpp
+  req.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\rep.cpp)
+  router.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\req.cpp)
+  scatter.cpp
+  select.cpp
+  server.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\select.cpp)
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\router.cpp)
+  session_base.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\scatter.cpp)
+  signaler.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\server.cpp)
+  socket_base.cpp
+  socket_poller.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\signaler.cpp)
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\session_base.cpp)
+  socks.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\socket_base.cpp)
+  socks_connecter.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\socket_poller.cpp)
+  stream.cpp
+  stream_engine.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\socks_connecter.cpp)
+  sub.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\stream_engine.cpp)
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\stream.cpp)
+  tcp.cpp
+  tcp_address.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\sub.cpp)
+  tcp_connecter.cpp
+  tcp_listener.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\tcp_connecter.cpp)
+  thread.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\tcp_listener.cpp)
+  timers.cpp
+  trie.cpp
+  udp_address.cpp
+  udp_engine.cpp
+  v1_decoder.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\udp_engine.cpp)
+  v1_encoder.cpp
+  v2_decoder.cpp
+  v2_encoder.cpp
+  xpub.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\xpub.cpp)
+  xsub.cpp
+  zmq.cpp
+  zmq_utils.cpp
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\zmq.cpp)
+c:\users\linzer\documents\projects\zeromq-4.2.0\src\ypipe.hpp(4): fatal error C1083: 无法打开包括文件: “atomicp_tr.hpp”: No such file or directory (编译源文件 ..\..\..\..\src\xsub.cpp)
